@@ -5,6 +5,10 @@ import {
 	Route,
 	Link
 } from "react-router-dom";
+import PrivateRoute from "./containers/PrivateRouteContainer";
+import LoginFormContainer from "./containers/LoginFormContainer";
+import ProfileContainer from "./containers/ProfileContainer";
+import NewsContainer from "./containers/NewsContainer";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -48,14 +52,12 @@ export default function App() {
 						<Home/>
 					</Route>
 					<Route path="/login">
-						<Login/>
+						<LoginFormContainer/>
 					</Route>
 					<Route path="/news">
-						<News/>
+						<NewsContainer/>
 					</Route>
-					<Route path="/profile">
-						<Profile/>
-					</Route>
+					<PrivateRoute path='/profile' component={ProfileContainer}/>
 				</Switch>
 			</div>
 		</Router>
@@ -71,28 +73,4 @@ function Home() {
 			<h2>Home</h2>
 		</div>
 	);
-}
-
-function Login() {
-	return (
-		<div>
-			<h2>Login</h2>
-		</div>
-	);
-}
-
-function Profile() {
-	return (
-		<div>
-			<h2>Profile</h2>
-		</div>
-	);
-}
-
-function News() {
-	return (
-		<div>
-			<h2>News</h2>
-		</div>
-	)
 }

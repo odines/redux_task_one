@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ab88e5c-1654-4b63-99ae-b52e36667bc2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/reactTemplatesPlugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/LoginActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/News.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/LoginFormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/NewsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/PrivateRouteContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/ProfileContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/sessionReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/configureStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/checkLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux_task_one.iml" beforeDir="false" afterPath="$PROJECT_DIR$/redux_task_one.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +39,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1WO2DikKXPOIjfrKwhV4xwYqTVa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,11 +53,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/MERGE SVN/work" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -95,11 +128,49 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579006202583</updated>
-      <workItem from="1579006204792" duration="3715000" />
+      <workItem from="1579006204792" duration="24703000" />
+      <workItem from="1579510238679" duration="5262000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1579096130949</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579096130949</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2185" y="114" key="CommitChangelistDialog2" timestamp="1579096130286">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2185" y="114" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579096130286" />
+    <state x="2061" y="162" key="SettingsEditor" timestamp="1579521577404">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2061" y="162" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579521577404" />
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1579096255990">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579096255990" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/LoginForm.js</url>
+          <line>32</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
