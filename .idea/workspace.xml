@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ab88e5c-1654-4b63-99ae-b52e36667bc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/reactTemplatesPlugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/LoginActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/News.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/LoginFormContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/NewsContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/PrivateRouteContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/ProfileContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/sessionReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/configureStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/checkLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux_task_one.iml" beforeDir="false" afterPath="$PROJECT_DIR$/redux_task_one.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/LoginActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/LoginActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LoginFormContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LoginFormContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579006202583</updated>
       <workItem from="1579006204792" duration="24703000" />
-      <workItem from="1579510238679" duration="5262000" />
+      <workItem from="1579510238679" duration="9765000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1579096130949</created>
@@ -138,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579096130949</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created actionCreators, reducers, almost working version except of success redirect to profile page after login">
+      <created>1579531270095</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579531270096</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,31 +140,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="created actionCreators, reducers, almost working version except of success redirect to profile page after login" />
+    <option name="LAST_COMMIT_MESSAGE" value="created actionCreators, reducers, almost working version except of success redirect to profile page after login" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2185" y="114" key="CommitChangelistDialog2" timestamp="1579096130286">
+    <state x="2185" y="114" key="CommitChangelistDialog2" timestamp="1579531268911">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2185" y="114" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579096130286" />
+    <state x="2185" y="114" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579531268911" />
+    <state width="1615" height="364" key="GridCell.Tab.0.bottom" timestamp="1579601072276">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1615" height="364" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579601072276" />
+    <state width="1615" height="364" key="GridCell.Tab.0.center" timestamp="1579601072275">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1615" height="364" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579601072275" />
+    <state width="1615" height="364" key="GridCell.Tab.0.left" timestamp="1579601072275">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1615" height="364" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579601072275" />
+    <state width="1615" height="364" key="GridCell.Tab.0.right" timestamp="1579601072276">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1615" height="364" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579601072276" />
     <state x="2061" y="162" key="SettingsEditor" timestamp="1579521577404">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="162" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579521577404" />
-    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1579096255990">
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1579531273288">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579096255990" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/LoginForm.js</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579531273288" />
   </component>
 </project>

@@ -1,7 +1,6 @@
 import {Component} from "react";
 import * as React from "react";
 
-
 class LoginForm extends Component {
 
 	constructor() {
@@ -17,10 +16,9 @@ class LoginForm extends Component {
 	}
 
 	handleSubmitForm(event) {
-		console.log('Handle Login');
 		event.preventDefault();
 		const {username, password} = {...this.state};
-		this.props.handleLogin(username, password)
+		this.props.handleLogin({username, password}, this.props.history)
 	}
 
 	handleChange(event) {
@@ -29,7 +27,6 @@ class LoginForm extends Component {
 	}
 
 	handleLogOut(event) {
-		console.log('Handle Logout');
 		this.props.handleLogout();
 	}
 
@@ -60,10 +57,8 @@ class LoginForm extends Component {
 						)
 						: null}
 				</React.Fragment>
-
 			)
 		}
-
 	}
 
 	render() {
@@ -74,7 +69,6 @@ class LoginForm extends Component {
 
 			</div>
 		)
-
 	}
 }
 
