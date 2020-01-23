@@ -3,7 +3,7 @@ import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
-	Link
+	NavLink
 } from "react-router-dom";
 import PrivateRoute from "./containers/PrivateRouteContainer";
 import LoginFormContainer from "./containers/LoginFormContainer";
@@ -22,23 +22,22 @@ import NewsContainer from "./containers/NewsContainer";
 export default function App() {
 	return (
 		<Router>
+
 			<div>
-				<ul>
+				<ul className="navigation-list">
 					<li>
-						<Link to="/">Home</Link>
+						<NavLink activeClassName='active' exact={true} to="/">Home</NavLink>
 					</li>
 					<li>
-						<Link to="/login">Login</Link>
+						<NavLink activeClassName='active' to="/login">Login</NavLink>
 					</li>
 					<li>
-						<Link to="/news">News</Link>
+						<NavLink activeClassName='active' to="/news">News</NavLink>
 					</li>
 					<li>
-						<Link to="/profile">Profile</Link>
+						<NavLink activeClassName='active' to="/profile">Profile</NavLink>
 					</li>
 				</ul>
-
-				<hr/>
 
 				{/*
           A <Switch> looks through all its children <Route>
@@ -63,9 +62,6 @@ export default function App() {
 		</Router>
 	);
 }
-
-// You can think of these components as "pages"
-// in your app.
 
 function Home() {
 	return (

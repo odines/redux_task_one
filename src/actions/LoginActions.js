@@ -7,7 +7,6 @@ export const LOG_OUT = 'LOG_OUT';
 export function handleLogin(user, history) {
 	return function (dispatch) {
 		try {
-			debugger
 			const {username, password} = user;
 			if (checkLogin(username, password)) {
 				dispatch({
