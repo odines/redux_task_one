@@ -1,5 +1,7 @@
 import {Component} from "react";
 import * as React from "react";
+import Loader from "./Loader";
+
 
 class LoginForm extends Component {
 
@@ -18,7 +20,11 @@ class LoginForm extends Component {
 	handleSubmitForm(event) {
 		event.preventDefault();
 		const {username, password} = {...this.state};
-		this.props.handleLogin({username, password}, this.props.history)
+
+
+		this.props.handleLogin({username, password}, this.props.history, () => {
+			this.setState({password: ''})
+		})
 	}
 
 	handleChange(event) {
@@ -63,10 +69,9 @@ class LoginForm extends Component {
 
 	render() {
 		return (
-			<div>
-				<h2>Login Form</h2>
-				{this.renderTemplate()}
-
+			<div className='container'>
+				<h1>Login Form</h1>
+				{this.props.isFetching ? <Loader/> : this.renderTemplate()}
 			</div>
 		)
 	}

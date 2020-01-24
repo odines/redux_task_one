@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ab88e5c-1654-4b63-99ae-b52e36667bc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/NewsActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/newsReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/LoginActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/LoginActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/NewsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/NewsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LoginFormContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LoginFormContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/sessionReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/sessionReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579006202583</updated>
       <workItem from="1579006204792" duration="24703000" />
-      <workItem from="1579510238679" duration="25164000" />
+      <workItem from="1579510238679" duration="39248000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1579096130949</created>
@@ -143,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579603611856</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fetch news from backend. added the react-preloader">
+      <created>1579783502344</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579783502344</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,17 +157,18 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="created actionCreators, reducers, almost working version except of success redirect to profile page after login" />
     <MESSAGE value="added redirect to /profile page after login" />
-    <option name="LAST_COMMIT_MESSAGE" value="added redirect to /profile page after login" />
+    <MESSAGE value="fetch news from backend. added the react-preloader" />
+    <option name="LAST_COMMIT_MESSAGE" value="fetch news from backend. added the react-preloader" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2152" y="178" key="#Inspections" timestamp="1579697587335">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2152" y="178" key="#Inspections/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579697587335" />
-    <state x="2185" y="114" key="CommitChangelistDialog2" timestamp="1579603611053">
+    <state x="2185" y="114" key="CommitChangelistDialog2" timestamp="1579783501489">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2185" y="114" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579603611053" />
+    <state x="2185" y="114" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579783501489" />
     <state width="1615" height="364" key="GridCell.Tab.0.bottom" timestamp="1579601072276">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
@@ -184,17 +189,17 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="162" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579521577404" />
-    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1579603614621">
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1579783506880">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579603614621" />
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579783506880" />
     <state x="2640" y="0" width="809" height="779" key="dock-window-1" timestamp="1579698982952">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2640" y="0" width="809" height="779" key="dock-window-1/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579698982952" />
-    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579694538527">
+    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579871924217">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579694538527" />
+    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579871924217" />
   </component>
 </project>

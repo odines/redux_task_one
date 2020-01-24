@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Planets} from 'react-preloaders';
+import Loader from "./Loader";
 
 
 class News extends React.Component {
@@ -21,7 +21,7 @@ class News extends React.Component {
 		return (
 
 			<div className='news-container'>
-				<Planets customLoading={isFetching} time={0}/>
+				{isFetching && <Loader/>}
 				<ul className='news-data col-md-12'>
 					{newsData.map((entry) => {
 						return (
