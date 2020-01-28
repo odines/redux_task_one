@@ -9,14 +9,14 @@ const mapStateToProps = state => {
 		errorMsg: state.session.errorMsg,
 		isFetching: state.session.isFetching
 	}
-}
+};
 
 const mapDispatchToProps = dispatch => {
 	return {
 		handleLogin: (user, history, errorCallback) => dispatch(handleLogin(user, history, errorCallback)),
 		handleLogout: () => dispatch(handleLogOut())
 	}
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(LoginForm))
 

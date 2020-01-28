@@ -22,7 +22,7 @@ export function fetchNews() {
 						type: GET_NEWS_SUCCESS,
 						payload: response.data
 					})
-				}
+				} else throw Error('Ошибка при получении новостей')
 			})
 			.catch((error) => {
 				console.log(error);

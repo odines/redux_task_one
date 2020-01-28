@@ -51,9 +51,18 @@ class LoginForm extends Component {
 			return (
 				<React.Fragment>
 					<form onSubmit={this.handleSubmitForm}>
-						<input placeholder='UserName' name='username' value={this.state.username} onChange={this.handleChange}/>
-						<input placeholder='Password' name='password' value={this.state.password} onChange={this.handleChange}/>
-						<button>Submit</button>
+						<div className='form-group'>
+							<label htmlFor='email'>Email address</label>
+							<input type='email' className='form-control' name='username' placeholder='Email address' value={this.state.username}
+								   onChange={this.handleChange}/>
+						</div>
+
+						<div className='form-group'>
+							<label htmlFor='password'>Password</label>
+							<input type='password' className='form-control' placeholder='Password' name='password' value={this.state.password}
+								   onChange={this.handleChange}/>
+						</div>
+						<button type='submit' className='btn btn-primary'>Submit</button>
 					</form>
 					{errorMsg ? (
 							<React.Fragment>
