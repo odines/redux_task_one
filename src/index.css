@@ -55,5 +55,13 @@ ul.navigation-list li a:hover {
 	100% { transform: rotate(360deg); }
 }
 
+i.link-icon {
+	margin-right: 5px;
+}
+
+span.error {
+	color: #FF0000;
+}
+
 
 

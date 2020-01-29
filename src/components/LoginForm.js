@@ -2,6 +2,9 @@ import {Component} from "react";
 import * as React from "react";
 import Loader from "./Loader";
 
+const emailRegEx = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+const passMinLength = 6;
+
 
 class LoginForm extends Component {
 
@@ -9,7 +12,16 @@ class LoginForm extends Component {
 		super();
 		this.state = {
 			username: '',
-			password: ''
+			password: '',
+			usernameValidation: {
+				isValid: false,
+				errorMessage: ''
+			},
+			passwordValidation: {
+				isValid: false,
+				errorMessage: ''
+			},
+			formValid: false
 		}
 
 		this.handleSubmitForm = this.handleSubmitForm.bind(this);
@@ -27,9 +39,46 @@ class LoginForm extends Component {
 		})
 	}
 
+	validateField = (name) => {
+		let value = this.state[name];
+		let isValid;
+		switch (name) {
+
+			case 'username':
+				isValid = emailRegEx.test(value);
+
+				console.log('fieldname = ' + name + ', isValid = ' + isValid);
+
+				this.setState({
+					usernameValidation: {
+						isValid: isValid,
+						errorMessage: isValid ? '' : 'Email is not valid'
+					}
+				});
+				break;
+
+			case 'password' :
+				isValid = (value.length >= passMinLength);
+				console.log('fieldname = ' + name + ', isValid = ' + isValid);
+
+				this.setState({
+					passwordValidation: {
+						isValid: isValid,
+						errorMessage: isValid ? '' : 'Password is not valid'
+					}
+				});
+				break;
+		}
+
+	};
+
 	handleChange(event) {
 		const {name, value} = event.target;
-		this.setState({[name]: value})
+
+
+		this.setState({[name]: value}, () => {
+			this.validateField(name)
+		})
 	}
 
 	handleLogOut(event) {
@@ -53,16 +102,23 @@ class LoginForm extends Component {
 					<form onSubmit={this.handleSubmitForm}>
 						<div className='form-group'>
 							<label htmlFor='email'>Email address</label>
-							<input type='email' className='form-control' name='username' placeholder='Email address' value={this.state.username}
+							<input type='email' className='form-control' name='username' placeholder='Email address'
+								   value={this.state.username}
 								   onChange={this.handleChange}/>
+							{!this.state.usernameValidation.isValid ?
+								<span className='error'>{this.state.usernameValidation.errorMessage}</span> : ''}
 						</div>
 
 						<div className='form-group'>
 							<label htmlFor='password'>Password</label>
-							<input type='password' className='form-control' placeholder='Password' name='password' value={this.state.password}
+							<input type='password' className='form-control' placeholder='Password' name='password'
+								   value={this.state.password}
 								   onChange={this.handleChange}/>
+							{!this.state.passwordValidation.isValid ?
+								<span className='error'>{this.state.passwordValidation.errorMessage}</span> : ''}
+
 						</div>
-						<button type='submit' className='btn btn-primary'>Submit</button>
+						<button disabled={!(this.state.usernameValidation.isValid && this.state.passwordValidation.isValid)} type='submit' className='btn btn-primary'>Submit</button>
 					</form>
 					{errorMsg ? (
 							<React.Fragment>

@@ -1,15 +1,9 @@
 import React, {Component} from "react";
 import Loader from "./Loader";
+import {SocialLink} from "./SocialLink";
 
 
-function SocialLink(props) {
-	return (
 
-		<a href={props.link} target='_blank' rel="noopener noreferrer"> <i className="fas fa-user"/>{props.label}</a>
-
-	)
-
-}
 
 class Profile extends Component {
 
@@ -32,9 +26,9 @@ class Profile extends Component {
 				return (
 					<React.Fragment>
 
-						<p>City: {profileData.city} </p>
+						<p><b>City:</b> {profileData.city} </p>
 
-						<p>Знание языков:</p>
+						<p><b>Знание языков:</b></p>
 						<ul>
 							{profileData.languages.map((language, index) => {
 								return (<li key={index}>{language}</li>)
@@ -42,7 +36,7 @@ class Profile extends Component {
 
 						</ul>
 
-						<p>Ссылки :</p>
+						<p><b>Ссылки :</b></p>
 
 						<ul>
 							{profileData.social.map((linkItem, index) => {
