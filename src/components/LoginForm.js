@@ -2,7 +2,7 @@ import {Component} from "react";
 import * as React from "react";
 import Loader from "./Loader";
 
-const emailRegEx = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+const emailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 const passMinLength = 6;
 
 
@@ -43,12 +43,8 @@ class LoginForm extends Component {
 		let value = this.state[name];
 		let isValid;
 		switch (name) {
-
 			case 'username':
 				isValid = emailRegEx.test(value);
-
-				console.log('fieldname = ' + name + ', isValid = ' + isValid);
-
 				this.setState({
 					usernameValidation: {
 						isValid: isValid,
@@ -56,11 +52,8 @@ class LoginForm extends Component {
 					}
 				});
 				break;
-
 			case 'password' :
 				isValid = (value.length >= passMinLength);
-				console.log('fieldname = ' + name + ', isValid = ' + isValid);
-
 				this.setState({
 					passwordValidation: {
 						isValid: isValid,
@@ -68,8 +61,9 @@ class LoginForm extends Component {
 					}
 				});
 				break;
+			default:
+				break;
 		}
-
 	};
 
 	handleChange(event) {
@@ -118,7 +112,9 @@ class LoginForm extends Component {
 								<span className='error'>{this.state.passwordValidation.errorMessage}</span> : ''}
 
 						</div>
-						<button disabled={!(this.state.usernameValidation.isValid && this.state.passwordValidation.isValid)} type='submit' className='btn btn-primary'>Submit</button>
+						<button disabled={!(this.state.usernameValidation.isValid && this.state.passwordValidation.isValid)}
+								type='submit' className='btn btn-primary'>Submit
+						</button>
 					</form>
 					{errorMsg ? (
 							<React.Fragment>
