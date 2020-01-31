@@ -1,4 +1,4 @@
-import {LOG_OUT, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS} from "../actions/LoginActions";
+import {LOG_OUT, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS, RESET_FORM} from "../actions/LoginActions";
 
 const initialState = {
 	isFetching: false,
@@ -18,6 +18,9 @@ export function sessionReducer(state = initialState, action) {
 
 		case LOG_OUT:
 			return {...state, user: null, errorMsg: ''};
+
+		case RESET_FORM:
+			return {...state, errorMsg: ''};
 
 		default:
 			return state;

@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ab88e5c-1654-4b63-99ae-b52e36667bc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/SocialLink.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/localStorageUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/LoginActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/LoginActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/NewsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/NewsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/ProfileActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ProfileActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LoginFormContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LoginFormContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/sessionReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/sessionReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/configureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/checkLogin.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +123,7 @@
       <updated>1579006202583</updated>
       <workItem from="1579006204792" duration="24703000" />
       <workItem from="1579510238679" duration="39248000" />
+      <workItem from="1580378439177" duration="13101000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1579096130949</created>
@@ -150,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580220411144</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactoring, added validation on the login form">
+      <created>1580301814244</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580301814244</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactoring, fixed warnings">
+      <created>1580302001777</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580302001777</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,68 +186,62 @@
     <MESSAGE value="added redirect to /profile page after login" />
     <MESSAGE value="fetch news from backend. added the react-preloader" />
     <MESSAGE value="fetch profile info from server and render it on the profile page" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetch profile info from server and render it on the profile page" />
+    <MESSAGE value="refactoring, added validation on the login form" />
+    <MESSAGE value="refactoring, fixed warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring, fixed warnings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2152" y="178" key="#Inspections" timestamp="1579697587335">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2152" y="178" key="#Inspections/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579697587335" />
-    <state x="2185" y="114" key="CommitChangelistDialog2" timestamp="1580301813505">
+    <state x="2185" y="114" key="CommitChangelistDialog2" timestamp="1580302001046">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2185" y="114" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580301813505" />
-    <state width="1615" height="364" key="GridCell.Tab.0.bottom" timestamp="1579601072276">
+    <state x="2185" y="114" key="CommitChangelistDialog2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580302001046" />
+    <state width="1615" height="364" key="GridCell.Tab.0.bottom" timestamp="1580378382875">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1615" height="364" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579601072276" />
-    <state width="1615" height="364" key="GridCell.Tab.0.center" timestamp="1579601072275">
+    <state width="1615" height="364" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580378382875" />
+    <state width="1615" height="364" key="GridCell.Tab.0.center" timestamp="1580378382875">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1615" height="364" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579601072275" />
-    <state width="1615" height="364" key="GridCell.Tab.0.left" timestamp="1579601072275">
+    <state width="1615" height="364" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580378382875" />
+    <state width="1615" height="364" key="GridCell.Tab.0.left" timestamp="1580378382875">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1615" height="364" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579601072275" />
-    <state width="1615" height="364" key="GridCell.Tab.0.right" timestamp="1579601072276">
+    <state width="1615" height="364" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580378382875" />
+    <state width="1615" height="364" key="GridCell.Tab.0.right" timestamp="1580378382875">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state width="1615" height="364" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579601072276" />
+    <state width="1615" height="364" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580378382875" />
+    <state x="2366" y="230" key="RollbackChangesDialog" timestamp="1580307251747">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2366" y="230" key="RollbackChangesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580307251747" />
     <state x="2061" y="162" key="SettingsEditor" timestamp="1579521577404">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="162" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579521577404" />
-    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1580301816441">
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2" timestamp="1580302004506">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580301816441" />
+    <state x="2152" y="252" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580302004506" />
     <state x="2640" y="0" width="809" height="779" key="dock-window-1" timestamp="1579698982952">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2640" y="0" width="809" height="779" key="dock-window-1/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579698982952" />
-    <state x="2256" y="257" width="607" height="526" key="find.popup" timestamp="1580297694237">
+    <state x="2255" y="257" width="737" height="526" key="find.popup" timestamp="1580476635234">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2256" y="257" width="607" height="526" key="find.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580297694237" />
-    <state x="2216" y="240" key="run.anything.popup" timestamp="1580301097907">
+    <state x="2255" y="257" width="737" height="526" key="find.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580476635234" />
+    <state x="2216" y="240" key="run.anything.popup" timestamp="1580306984238">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2216" y="240" key="run.anything.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580301097907" />
+    <state x="2216" y="240" key="run.anything.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1580306984238" />
     <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579871924217">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1579871924217" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/News.js</url>
-          <line>30</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

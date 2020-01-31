@@ -11,7 +11,6 @@ class News extends React.Component {
 
 	renderTemplate = () => {
 		const {newsData, isFetching, error} = this.props.news;
-
 		if (error) {
 			return (
 				<h1 className='error'>{error}</h1>

@@ -18,7 +18,6 @@ export function getProfile(profileID) {
 
 		if (profileID) {
 			const requestURL = GET_PROFILE_URL + profileID;
-			console.log('GET PROFILE REQUEST, url = ' + requestURL);
 
 			fetch(requestURL)
 				.then(response => response.json())
@@ -34,7 +33,6 @@ export function getProfile(profileID) {
 					}
 				})
 				.catch(error => {
-					console.log(error);
 					dispatch({
 						type: GET_PROFILE_ERROR,
 						payload: error.message,

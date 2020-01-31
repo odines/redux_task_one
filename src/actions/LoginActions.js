@@ -2,6 +2,7 @@ export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const LOG_OUT = 'LOG_OUT';
+export const RESET_FORM = 'RESET_FORM';
 const VALIDATE_LOGIN_URL = 'https://mysterious-reef-29460.herokuapp.com/api/v1/validate';
 
 function handleErrorMessage(message) {
@@ -50,7 +51,6 @@ export function handleLogin(user, history, errorCallback) {
 				}
 			})
 			.catch(error => {
-				console.log(error);
 				dispatch({
 					type: LOGIN_FAIL,
 					error: true,
@@ -59,6 +59,16 @@ export function handleLogin(user, history, errorCallback) {
 				errorCallback()
 			});
 	}
+}
+
+export function resetForm() {
+	return function (dispatch) {
+		dispatch({
+			type: RESET_FORM
+		})
+
+	}
+
 }
 
 export function handleLogOut() {

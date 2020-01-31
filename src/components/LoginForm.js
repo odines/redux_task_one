@@ -1,10 +1,11 @@
 import {Component} from "react";
 import * as React from "react";
 import Loader from "./Loader";
+import PropTypes from 'prop-types';
+
 
 const emailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
-const passMinLength = 6;
-
+const passMinLength = 5;
 
 class LoginForm extends Component {
 
@@ -23,59 +24,67 @@ class LoginForm extends Component {
 			},
 			formValid: false
 		}
-
-		this.handleSubmitForm = this.handleSubmitForm.bind(this);
-		this.handleChange = this.handleChange.bind(this);
-		this.handleLogOut = this.handleLogOut.bind(this);
 	}
 
-	handleSubmitForm(event) {
+	componentDidMount() {
+		this.props.resetForm();
+	}
+
+	handleSubmitForm = (event) => {
 		event.preventDefault();
 		const {username, password} = {...this.state};
-
-
 		this.props.handleLogin({username, password}, this.props.history, () => {
 			this.setState({password: ''})
 		})
 	}
 
-	validateField = (name) => {
-		let value = this.state[name];
+	validateField = (name, value) => {
 		let isValid;
 		switch (name) {
 			case 'username':
 				isValid = emailRegEx.test(value);
-				this.setState({
-					usernameValidation: {
-						isValid: isValid,
-						errorMessage: isValid ? '' : 'Email is not valid'
+				return (
+					{
+						usernameValidation: {
+							isValid: isValid,
+							errorMessage: isValid ? '' : 'Email is not valid'
+						}
 					}
-				});
-				break;
+				);
 			case 'password' :
 				isValid = (value.length >= passMinLength);
-				this.setState({
+				return ({
 					passwordValidation: {
 						isValid: isValid,
 						errorMessage: isValid ? '' : 'Password is not valid'
 					}
 				});
-				break;
 			default:
-				break;
+				return {};
 		}
 	};
 
-	handleChange(event) {
-		const {name, value} = event.target;
+	handleChange = (event) => {
+		event.preventDefault();
+		const {name, value} = event.currentTarget;
 
+		let validationResult = Object.entries(this.validateField(name, value));
 
-		this.setState({[name]: value}, () => {
-			this.validateField(name)
-		})
+		if (validationResult.length > 0) {
+			let [validationName, validationValue] = validationResult[0];
+			this.setState({
+				[name]: value,
+				[validationName]: validationValue
+			})
+		} else {
+			this.setState({
+				[name]: value
+			})
+		}
 	}
 
-	handleLogOut(event) {
+	handleLogOut = (event) => {
+		event.preventDefault();
 		this.props.handleLogout();
 	}
 
@@ -93,10 +102,12 @@ class LoginForm extends Component {
 		} else {
 			return (
 				<React.Fragment>
-					<form onSubmit={this.handleSubmitForm}>
+					<form onSubmit={this.handleSubmitForm} className="col-md-6">
 						<div className='form-group'>
 							<label htmlFor='email'>Email address</label>
-							<input type='email' className='form-control' name='username' placeholder='Email address'
+							<input type='email'
+								   className={this.state.usernameValidation.isValid ? 'form-control' : 'form-control error'}
+								   name='username' placeholder='Email address'
 								   value={this.state.username}
 								   onChange={this.handleChange}/>
 							{!this.state.usernameValidation.isValid ?
@@ -105,7 +116,9 @@ class LoginForm extends Component {
 
 						<div className='form-group'>
 							<label htmlFor='password'>Password</label>
-							<input type='password' className='form-control' placeholder='Password' name='password'
+							<input type='password'
+								   className={this.state.passwordValidation.isValid ? 'form-control' : 'form-control error'}
+								   placeholder='Password' name='password'
 								   value={this.state.password}
 								   onChange={this.handleChange}/>
 							{!this.state.passwordValidation.isValid ?
@@ -137,5 +150,16 @@ class LoginForm extends Component {
 		)
 	}
 }
+
+LoginForm.propTypes = {
+	handleLogout: PropTypes.func.isRequired,
+	handleLogin: PropTypes.func.isRequired,
+	isFetching: PropTypes.bool.isRequired,
+	errorMsg: PropTypes.string.isRequired,
+
+	user: PropTypes.object,
+	errorMessage: PropTypes.string,
+};
+
 
 export default LoginForm;

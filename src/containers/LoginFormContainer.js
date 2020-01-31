@@ -1,4 +1,4 @@
-import {handleLogin, handleLogOut} from "../actions/LoginActions";
+import {handleLogin, handleLogOut, resetForm} from "../actions/LoginActions";
 import {connect} from "react-redux";
 import LoginForm from "../components/LoginForm";
 import {withRouter} from "react-router-dom";
@@ -14,7 +14,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
 	return {
 		handleLogin: (user, history, errorCallback) => dispatch(handleLogin(user, history, errorCallback)),
-		handleLogout: () => dispatch(handleLogOut())
+		handleLogout: () => dispatch(handleLogOut()),
+		resetForm: () => dispatch(resetForm())
 	}
 };
 

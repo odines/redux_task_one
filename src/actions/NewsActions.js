@@ -25,7 +25,6 @@ export function fetchNews() {
 				} else throw Error('Ошибка при получении новостей')
 			})
 			.catch((error) => {
-				console.log(error);
 				dispatch({
 					type: GET_NEWS_ERROR,
 					payload: 'Ошибка при получении новостей',
