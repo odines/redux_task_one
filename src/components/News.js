@@ -1,6 +1,7 @@
 import React from "react";
 
 import Loader from "./Loader";
+import PropTypes from 'prop-types';
 
 
 class News extends React.Component {
@@ -52,6 +53,11 @@ class News extends React.Component {
 		)
 
 	}
+}
+
+News.propTypes = {
+	fetchNews: PropTypes.func.isRequired,
+	news: PropTypes.object
 }
 
 export default News;

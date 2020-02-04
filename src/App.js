@@ -9,6 +9,7 @@ import PrivateRoute from "./containers/PrivateRouteContainer";
 import LoginFormContainer from "./containers/LoginFormContainer";
 import ProfileContainer from "./containers/ProfileContainer";
 import NewsContainer from "./containers/NewsContainer";
+import NotFound from "./components/NotFound";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -57,6 +58,9 @@ export default function App() {
 						<NewsContainer/>
 					</Route>
 					<PrivateRoute path='/profile' component={ProfileContainer}/>
+					<Route>
+						<NotFound/>
+					</Route>
 				</Switch>
 			</div>
 		</Router>

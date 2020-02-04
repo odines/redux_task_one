@@ -1,8 +1,7 @@
 import React, {Component} from "react";
 import Loader from "./Loader";
 import {SocialLink} from "./SocialLink";
-
-
+import PropTypes from 'prop-types';
 
 
 class Profile extends Component {
@@ -65,6 +64,23 @@ class Profile extends Component {
 		)
 	}
 }
+
+Profile.propTypes = {
+	handleGetProfile: PropTypes.func.isRequired,
+
+	profile: PropTypes.shape({
+		errorMsg: PropTypes.string,
+		isFetching: PropTypes.bool,
+		profileData: PropTypes.shape({
+			city: PropTypes.string,
+			languages: PropTypes.arrayOf(PropTypes.string),
+			social: PropTypes.arrayOf(PropTypes.shape({
+				link: PropTypes.string,
+				label: PropTypes.string
+			}))
+		})
+	})
+};
 
 export default Profile
 

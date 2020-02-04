@@ -8,5 +8,6 @@
     <orderEntry type="library" name="@types/react" level="application" />
     <orderEntry type="library" name="@types/knockout" level="application" />
     <orderEntry type="library" name="all" level="application" />
+    <orderEntry type="library" name="@types/jest" level="application" />
   </component>
 </module>
