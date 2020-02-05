@@ -1,12 +1,8 @@
 import fetch from 'cross-fetch'
 import swapArray from "../utils/profileUtils";
-
-export const GET_PROFILE_REQUEST = 'GET_PROFILE_REQUEST';
-export const GET_PROFILE_SUCCESS = 'GET_PROFILE_SUCCESS';
-export const GET_PROFILE_ERROR = 'GET_PROFILE_ERROR';
+import {GET_PROFILE_ERROR, GET_PROFILE_REQUEST, GET_PROFILE_SUCCESS} from "../utils/CommonConstants";
 
 const GET_PROFILE_URL = 'https://mysterious-reef-29460.herokuapp.com/api/v1/user-info/';
-
 
 export function getProfile(profileID) {
 

@@ -1,4 +1,4 @@
-import {GET_PROFILE_SUCCESS, GET_PROFILE_ERROR, GET_PROFILE_REQUEST} from "../actions/ProfileActions";
+import {GET_PROFILE_SUCCESS, GET_PROFILE_ERROR, GET_PROFILE_REQUEST} from '../utils/CommonConstants';
 
 const initialState = {
 	isFetching: false,

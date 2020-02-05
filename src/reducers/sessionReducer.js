@@ -1,4 +1,4 @@
-import {LOG_OUT, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS, RESET_FORM} from "../actions/LoginActions";
+import {LOG_OUT, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS, RESET_FORM} from '../utils/CommonConstants';
 
 const initialState = {
 	isFetching: false,

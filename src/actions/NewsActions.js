@@ -1,12 +1,7 @@
 import fetch from 'cross-fetch'
+import {GET_NEWS_ERROR, GET_NEWS_REQUEST, GET_NEWS_SUCCESS, SERVER_URI} from "../utils/CommonConstants";
 
-export const GET_NEWS_REQUEST = 'GET_NEWS_REQUEST';
-
-export const GET_NEWS_SUCCESS = 'GET_NEWS_SUCCESS';
-
-export const GET_NEWS_ERROR = 'GET_NEWS_ERROR'
-
-const GET_NEWS_URL = 'https://mysterious-reef-29460.herokuapp.com/api/v1/news'
+const GET_NEWS_URL = SERVER_URI + 'news';
 
 
 export function fetchNews() {

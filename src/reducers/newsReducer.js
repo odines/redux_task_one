@@ -1,4 +1,4 @@
-import {GET_NEWS_SUCCESS, GET_NEWS_ERROR, GET_NEWS_REQUEST} from "../actions/NewsActions";
+import {GET_NEWS_SUCCESS, GET_NEWS_ERROR, GET_NEWS_REQUEST} from '../utils/CommonConstants';
 
 
 export const initialState = {
