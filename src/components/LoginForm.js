@@ -27,8 +27,25 @@ class LoginForm extends Component {
 	}
 
 	componentDidMount() {
+		window.gapi.load('auth2', function () {
+			window.gapi.auth2.init({
+				client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID
+			}).then(auth2 => console.log('auth ok', auth2), error => console.log('auth init error', error))
+			/* Ready. Make a call to gapi.auth2.init or some other API */
+		});
 		this.props.resetForm();
 	}
+
+	handleGoogleLogin = (event) => {
+		event.preventDefault();
+		this.props.handleGoogleLogin(window.gapi.auth2.getAuthInstance());
+	};
+
+	handleGoogleLogout = (event) => {
+		event.preventDefault();
+		this.props.handleGoogleLogOut(window.gapi.auth2.getAuthInstance());
+	}
+
 
 	handleSubmitForm = (event) => {
 		event.preventDefault();
@@ -94,15 +111,17 @@ class LoginForm extends Component {
 		if (user && user.name) {
 			return (
 				<React.Fragment>
-					<h1>UserName: </h1>
+					{/*<h1>UserName: </h1>
 					<p>{user.name}</p>
-					<button onClick={this.handleLogOut}>Log Out</button>
+					<button onClick={this.handleLogOut}>Log Out</button>*/}
+					<p><b>UserName:</b> {user.name}</p>
+					<button className='btn btn-danger' onClick={this.handleGoogleLogout}>Google Logout</button>
 				</React.Fragment>
 			)
 		} else {
 			return (
 				<React.Fragment>
-					<form onSubmit={this.handleSubmitForm} className="col-md-6">
+					{/*<form onSubmit={this.handleSubmitForm} className="col-md-6">
 						<div className='form-group'>
 							<label htmlFor='email'>Email address</label>
 							<input type='email'
@@ -128,7 +147,9 @@ class LoginForm extends Component {
 						<button disabled={!(this.state.usernameValidation.isValid && this.state.passwordValidation.isValid)}
 								type='submit' className='btn btn-primary'>Submit
 						</button>
-					</form>
+					</form>*/}
+					<button className='btn btn-primary' onClick={this.handleGoogleLogin}>Google Login</button>
+
 					{errorMsg ? (
 							<React.Fragment>
 								<h1>Error Message:</h1>

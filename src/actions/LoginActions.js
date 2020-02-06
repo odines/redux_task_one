@@ -12,6 +12,58 @@ function handleErrorMessage(message) {
 	}
 }
 
+
+export function handleGoogleLogin(googleAuth) {
+	return function (dispatch) {
+		if (googleAuth) {
+			dispatch({
+				type: LOGIN_REQUEST
+			});
+
+			googleAuth.signIn()
+				.then(googleUser => {
+					const profile = googleUser.getBasicProfile();
+					debugger
+					console.log('google login success', profile);
+					dispatch({
+						type: LOGIN_SUCCESS,
+						error: false,
+						payload: {
+							name: profile.getName(),
+							id: profile.getId()
+						}
+					})
+				})
+				.catch(error => {
+					dispatch({
+						type: LOGIN_FAIL,
+						error: true,
+						payload: handleErrorMessage(error.message)
+					});
+				})
+		} else {
+			dispatch({
+				type: LOGIN_FAIL,
+				error: true,
+				payload: 'Google auth is not initialized'
+			})
+		}
+	}
+}
+
+export function handleGoogleLogOut(googleAuth) {
+	return function (dispatch) {
+		googleAuth.signOut()
+			.then(() => {
+				dispatch({
+					type: LOG_OUT
+				})
+			})
+	}
+
+}
+
+
 export function handleLogin(user, history, errorCallback) {
 	return function (dispatch) {
 		dispatch({
